@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>TegangDikit</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>🎬 TegangDikit</h1>
+
+<!-- MENU -->
+<div class="menu">
+  <button onclick="filterVideo('all')">Semua</button>
+  <button onclick="filterVideo('artis')">Artis</button>
+  <button onclick="filterVideo('tiktok')">Tiktokers</button>
+  <button onclick="filterVideo('mahasiswa')">Mahasiswa</button>
+  <button onclick="filterVideo('pacar')">Bareng Pacar</button>
+  <button onclick="filterVideo('tante')">Tante</button>
+</div>
+
+<!-- LOGIN ADMIN -->
+<div id="loginBox">
+  <input type="password" id="adminPass" placeholder="Password Admin">
+  <button onclick="loginAdmin()">Login</button>
+</div>
+
+<!-- PANEL ADMIN -->
+<div id="adminPanel" style="display:none;">
+  <h3>Upload Video</h3>
+
+  <input type="text" id="videoSrc" placeholder="Link video">
+
+  <select id="videoKategori">
+    <option value="artis">Artis</option>
+    <option value="tiktok">Tiktokers</option>
+    <option value="mahasiswa">Mahasiswa</option>
+    <option value="pacar">Bareng Pacar</option>
+    <option value="tante">Tante</option>
+  </select>
+
+  <button onclick="uploadVideo()">Upload</button>
+</div>
+
+<!-- PLAYER -->
+<div id="player" class="player">
+  <video id="mainVideo" controls autoplay></video>
+  <br><br>
+  <button onclick="tutupPlayer()">❌ Tutup</button>
+</div>
+
+<h2>Daftar Video</h2>
+<div id="videoList" class="grid"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
